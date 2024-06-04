@@ -57,3 +57,33 @@ let newVariable = 'Playing around with typeof.';
 console.log(typeof newVariable);
 newVariable = 1;
 console.log(typeof newVariable);
+
+
+const kelvin = 333;
+//constant Kelvin is 293
+const celsius = kelvin - 273;
+//constant celsius is 273 degress less than Kelvin
+const fahrenheit = celsius * (9/5) + 32
+//formula to fahrenheit
+const roundedFahrenheit = Math.floor(fahrenheit);
+//fahrenheit is round down
+const newton = celsius * (33/100);
+const roundedNewton = Math.floor(newton);
+console.log(`The temperature is ${roundedFahrenheit} degrees Fahrenheit`);
+console.log(`The temperature is ${roundedNewton} degrees Newton`);
+
+
+const myAge = 20;
+let earlyYears = 2;
+earlyYears *= 10.5;
+let laterYears = myAge - 2;
+laterYears *= 4;
+
+console.log(earlyYears, laterYears);
+
+const MyAgeInDogYears = earlyYears + laterYears;
+const myNamed = 'Adolfo';
+const myLowername = myNamed.toLowerCase();
+
+console.log(myLowername);
+console.log(`My name is ${myNamed}. I am ${myAge} years old in human years which is ${MyAgeInDogYears} years old in dog years.`)
