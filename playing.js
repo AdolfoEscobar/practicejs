@@ -101,3 +101,198 @@ if(sale) {
 }else{
   console.log('Time to wait for a sale.');
 }
+
+/*
+When writing conditional statements, sometimes we need to use different types of operators to compare values. These operators are called comparison operators.
+
+Here is a list of some handy comparison operators and their syntax:
+
+Less than: <
+Greater than: >
+Less than or equal to: <=
+Greater than or equal to: >=
+Is equal to: ===
+Is not equal to: !==
+
+*/
+let hungerLevel = 7;
+
+if(hungerLevel > 7){
+  console.log('Time to eat!');
+}else{
+  console.log('We can eat later!');
+}
+
+/*
+Working with conditionals means that we will be using booleans, true or false values. In JavaScript, there are operators that work with boolean values known as logical operators. We can use logical operators to add more sophisticated logic to our conditionals. There are three logical operators:
+
+the and operator (&&)
+the or operator (||)
+the not operator, otherwise known as the bang operator (!)
+*/
+
+//Logical Operators
+
+let mood = 'sleepy';
+let tirednessLevel = 6;
+if(mood === 'sleepy' && tirednessLevel > 8){
+   console.log('time to sleep');
+}else{
+  console.log('not bed time yet');
+}
+//CONDITIONAL STATEMENTS
+//Truthy and Falsy
+
+let wordCount = 1;
+
+if (wordCount) {
+  console.log("Great! You've started your work!");
+} else {
+  console.log('Better get to work!');
+}
+
+
+let favoritePhrase = '';
+
+if (favoritePhrase) {
+  console.log("This string doesn't seem to be empty.");
+} else {
+  console.log('This string is definitely empty.');
+}
+
+//CONDITIONAL STATEMENTS
+//Truthy and Falsy Assignment
+
+let tool = '';
+tool = 'marker';
+// Use short circuit evaluation to assign  writingUtensil variable below:
+let writingUtensil = tool || 'pen';
+
+console.log(`The ${writingUtensil} is mightier than the sword.`);
+
+//CONDITIONAL STATEMENTS
+//Ternary Operator
+
+let isLocked = false;
+
+isLocked ? console.log('You will need a key to open the door.')
+: console.log('You will not need a key to open the door.');
+
+
+let isCorrect = true;
+
+isCorrect ? console.log('Correct!')
+: console.log('Incorrect!');
+
+let favoritePhrases = 'Love That!';
+
+favoritePhrases === 'Love That!' ? console.log('I love that!')
+: console.log("I don't love that!");
+
+//Else If Statements
+
+let season = 'summer';
+
+if (season === 'spring') {
+  console.log('It\'s spring! The trees are budding!');
+}else if (season === 'winter'){
+  console.log('It\'s winter! Everything is covered in snow.');
+}else if (season === 'fall'){
+  console.log('It\'s fall! Leaves are falling!');
+}else if (season === 'summer'){
+  console.log('It\'s sunny and warm because it\'s summer!');
+} else {
+  console.log('Invalid season.');
+}
+
+//The switch keyword
+
+let athleteFinalPosition = 'first place';
+
+switch (athleteFinalPosition) {
+  case 'first place':
+    console.log('You get the gold medal!');
+    break;
+  case 'second place':
+    console.log('You get the silver medal!');
+    break;
+  case 'third place':
+    console.log('You get the bronze medal!');
+    break;
+  default:
+    console.log('No medal awarded.');
+    break;
+}
+
+
+//Magic Eight Ball
+
+var userName = '';
+
+userName === '' ? console.log('Hello!.')
+: console.log(`Hello ${userName}!`);
+
+userName = 'Adolfo';
+var userQuestion = 'How is my future?';
+console.log(`${userQuestion} ${userName} Ask`);
+
+var randomNumber = Math.floor(Math.random() * 8);
+
+var eightBall = '';
+
+switch(randomNumber){
+  case 0 :
+    eightBall = 'Bad';
+    break;
+  case 1 :
+    eightBall = 'It is certain';
+    break;
+  case 2 :
+    eightBall = 'It is decidedly so';
+    break;
+  case 3 :
+    eightBall = 'Reply hazy try again';
+    break;
+  case 4 :
+    eightBall = 'Cannot predict now';
+    break;
+  case 5 :
+    eightBall = 'Do not count on it';
+    break;
+  case 6 :
+    eightBall = 'My sources say no';
+    break;
+  case 7 :
+    eightBall = 'Outlook not so good';
+    break;
+  case 8 :
+    eightBall = 'Signs point to yes';
+    break;
+  default:
+    break;
+}
+
+console.log(eightBall);
+
+//Race Day
+
+let raceNumber = Math.floor(Math.random() * 1000);
+var runnerEarly = Boolean;
+var runnerAge = Number;
+
+runnerAge = 20;
+runnerEarly = false;
+
+if(runnerAge >= 18 && runnerEarly === true ){
+  raceNumber += 1000;
+}
+
+if(runnerAge > 18 && runnerEarly === true ){
+  console.log(`Your race start at 9:30 am ${raceNumber}`);
+}else if(runnerAge > 18 && runnerEarly === false){
+  console.log(`Your race start at 11:00 am ${raceNumber}`);
+}else if(runnerAge < 18){
+  console.log(`Your race start at 12:30 am ${raceNumber}`);
+}else{
+  console.log('See the registration desk');
+}
