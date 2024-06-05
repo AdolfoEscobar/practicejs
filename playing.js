@@ -87,3 +87,17 @@ const myLowername = myNamed.toLowerCase();
 
 console.log(myLowername);
 console.log(`My name is ${myNamed}. I am ${myAge} years old in human years which is ${MyAgeInDogYears} years old in dog years.`)
+
+// CONDITIONAL STATEMENTS
+
+//If Statement
+
+let sale = true;
+
+sale = false;
+
+if(sale) {
+  console.log('Time to buy!');
+}else{
+  console.log('Time to wait for a sale.');
+}
