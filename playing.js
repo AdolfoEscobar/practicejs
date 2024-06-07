@@ -394,3 +394,64 @@ const plantsNeedsWater = (day) => {
 const plantsNeedWater = day => day === 'Wednesday' ? true : false;
 
 console.log(plantsNeedWater('Wednesday'));
+
+//Blocks and Scope
+
+const city = 'New York City';
+function logCitySkyline(){
+  let skyscraper = 'Empire State Building';
+  return 'The stars over the ' + skyscraper + ' in '
+  + city;
+}
+console.log(logCitySkyline());
+
+//Global Scope
+
+var satellite = 'The Moon';
+var galaxy = 'The Milky Way';
+var stars = 'North Star';
+
+const callMyNightSky = () => {
+  return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+}
+console.log(callMyNightSky());
+
+//Block Scope
+
+/*
+const logSkyColor = () => {
+  let color = 'blue'; 
+  console.log(color); // Prints "blue"
+};
+
+logSkyColor(); // Prints "blue"
+console.log(color); // throws a ReferenceError
+*/
+
+//Scope Pollution (Bad practice)
+
+const satellitel = 'The Moon';
+const galaxys = 'The Milky Way';
+let starsx = 'North Star';
+
+const callsMyNightSky = () => {
+  stars = 'Sirius';
+	return 'Night Sky: ' + satellitel + ', ' + starsx + ', ' + galaxys;
+};
+console.log(callsMyNightSky());
+console.log(starsx);
+
+//Practice Good Scoping (Modular)
+
+const logVisibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+	let region = 'The Arctic';
+  // Add if statement here:
+  if(region === 'The Arctic'){
+    let lightWaves = 'Northern Lights';
+    console.log(lightWaves);
+  }
+  console.log(lightWaves);
+};
+
+logVisibleLightWaves();
