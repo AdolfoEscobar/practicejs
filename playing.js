@@ -470,3 +470,111 @@ console.log(listItem);
 
 console.log(famousSayings[2]);
 console.log(famousSayings[3]);
+
+//Update Elements
+
+let grocerysList = ['bread', 'tomatoes', 'milk'];
+
+grocerysList[1] =  'avocados';
+
+//Arrays with let and const
+
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments[0] = 'Mayo';
+
+console.log(condiments);
+
+condiments = ['Mayo'];
+
+console.log(condiments);
+
+utensils[3] = 'Spoon';
+
+console.log(utensils);
+
+//The .length property
+
+const objectives = ['Learn a new language', 'Read 52 books', 'Run a marathon'];
+
+console.log(objectives.length);
+
+//The .push() Method
+
+const chores = ['wash dishes', 'do laundry', 'take out trash'];
+
+chores.push('new1', 'new2');
+
+console.log(chores);
+
+//The .pop() Method
+
+const removed = chores.pop();
+
+console.log(chores);
+
+//More Array Methods
+
+/*
+
+Some arrays methods that are available to JavaScript 
+developers include: .join(), .slice(), .splice(), .shift(), 
+.unshift(), and .concat() amongst many others. 
+Using these built-in methods makes 
+it easier to do some common tasks when working with arrays.
+
+*/
+
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift();
+
+console.log(groceryList);
+
+groceryList.unshift('popcorn');
+
+console.log(groceryList);
+
+console.log(groceryList.slice(1, 4));
+
+console.log(groceryList);
+
+const pastaIndex = groceryList.indexOf('pasta');
+
+console.log(pastaIndex);
+
+//Arrays and Functions
+
+const concept = ['arrays', 'can', 'be', 'mutated'];
+
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+
+changeArr(concept);
+
+console.log(concept);
+
+function removeElement(newArr){
+  newArr.pop();
+}
+
+removeElement(concept);
+
+console.log(concept);
+
+//Nested Arrays
+
+const numberClusters = [[1, 2], [3, 4], [5, 6]];
+
+const target0 = numberClusters[0];
+const target1 = numberClusters[1];
+const target2 = numberClusters[2];
+const targetnumber5 = numberClusters[2][0];
+
+console.log(target0);
+console.log(target1);
+console.log(target2);
+console.log(targetnumber5);
