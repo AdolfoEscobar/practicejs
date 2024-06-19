@@ -840,3 +840,169 @@ const smallerNums = nums.map(num => num - 5);
 
 // Choose a method that will return a boolean value
 nums.every(num => num < 0);
+
+
+//OBJECTS 
+
+//Creating Objects Literals
+
+// Write your fasterShip object literal below
+let fasterShip = {
+  'Fuel Type': 'Turbo Fuel',
+  color: 'silver'
+};
+
+//Accessing Properties
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver',
+  'Fuel Type': 'Turbo Fuel',
+  numCrew: 5,
+  flightPath: ['Venus', 'Mars', 'Saturn']
+};
+
+var crewCount = spaceship.numCrew;
+console.log(crewCount);
+var planetArray = spaceship.flightPath;
+console.log(planetArray);
+
+
+//Bracket Notation
+
+let spaceships = {
+  'Fuel Type' : 'Turbo Fuel',
+  'Active Mission' : true,
+  homePlanet : 'Earth', 
+  numCrew: 5
+};
+
+let propName =  'Active Mission';
+let isActive = spaceships['Active Mission'];
+
+console.log(isActive);
+console.log(spaceships[propName]);
+
+//Property Assignment
+
+let spaceshipss = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+console.log(spaceshipss);
+spaceshipss.color = 'glorious gold';
+spaceshipss.numEngines = 5;
+delete spaceshipss['Secret Mission'];
+
+console.log(spaceshipss);
+
+//Methods
+
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+
+let alienShip = {
+  retreat() {
+    console.log(retreatMessage);
+  },
+  takeOff() {
+    console.log('Spim... Borp... Glix... Blastoff!');
+  }
+}
+
+alienShip.retreat();
+alienShip.takeOff();
+
+//Nested Objects
+
+
+let spaceshix = {
+  passengers: [{name: 'Dog'}],
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032 
+  },
+  crew: {
+    captain: { 
+      name: 'Sandra', 
+      degree: 'Computer Engineering', 
+      encourageTeam() { console.log('We got this!') },
+     'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+  },
+  engine: {
+    model: "Nimbus2000"
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD"
+    },
+    'back-up': {
+      battery: "Lithium",
+      terabytes: 50
+    }
+  }
+}; 
+
+let capFave = spaceshix.crew.captain['favorite foods'][0];
+console.log(capFave);
+
+let firstPassenger = spaceshix.passengers[0];
+console.log(firstPassenger);
+
+
+//Pass By Reference
+
+
+let spaceshixx = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth'
+};
+
+let greenEnergy = obj => {
+  obj['Fuel Type'] = 'avocado oil';
+}
+let remotelyDisable = obj => {
+  obj.disabled = true;
+}
+greenEnergy(spaceshixx);
+
+remotelyDisable(spaceshixx);
+
+console.log(spaceshixx)
+
+//Looping Through Objects
+
+let spaceshit = {
+  crew: {
+  captain: { 
+      name: 'Lily', 
+      degree: 'Computer Engineering', 
+      cheerTeam() { console.log('You got this!') } 
+      },
+  'chief officer': { 
+      name: 'Dan', 
+      degree: 'Aerospace Engineering', 
+      agree() { console.log('I agree, captain!') } 
+      },
+  medic: { 
+      name: 'Clementine', 
+      degree: 'Physics', 
+      announce() { console.log(`Jets on!`) } },
+  translator: {
+      name: 'Shauna', 
+      degree: 'Conservation Science', 
+      powerFuel() { console.log('The tank is full!') } 
+      }
+  }
+}; 
+
+for(let crewMember in spaceshit.crew){
+  console.log(`${crewMember}: ${spaceshit.crew[crewMember].name}`)
+}
+
+for (let crewMember in spaceshit.crew) {
+  console.log(`${spaceshit.crew[crewMember].name}: ${spaceshit.crew[crewMember].degree}`)
+};
